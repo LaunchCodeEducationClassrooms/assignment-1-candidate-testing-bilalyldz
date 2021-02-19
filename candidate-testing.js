@@ -52,8 +52,6 @@ if(candidateAnswers[i]===correctAnswers[i]){
     grade=(count)/(numberOfQuestions)*100;
     console.log(grade);
 
-
-  return grade;
   console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<<`);
   if(grade>=80){
     console.log(">>> Status: SUCCESSFULL <<<");
