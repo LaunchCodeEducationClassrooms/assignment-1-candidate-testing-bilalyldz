@@ -54,9 +54,9 @@ if(candidateAnswers[i]===correctAnswers[i]){
 
   console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<<`);
   if(grade>=80){
-    console.log(">>> Status: SUCCESSFULL <<<");
+    return (">>> Status: SUCCESSFULL <<<");
   }else{
-    console.log(">>> Status: FAILED <<<")
+    return (">>> Status: FAILED <<<")
   }
 }
 
