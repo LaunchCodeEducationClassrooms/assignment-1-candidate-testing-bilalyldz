@@ -52,11 +52,13 @@ if((candidateAnswers[i].toLowerCase())===(correctAnswers[i].toLowerCase())){
     grade=(count)/(numberOfQuestions)*100;
     console.log(grade);
 
-  console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<<`);
+  
   if(grade>=80){
-    return '>>> Status: SUCCESSFULL <<<';
+    console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<< \n>>> Status: SUCCESSFULL <<<;`);
+    
   }else{
-    return '>>> Status: FAILED <<<';
+     console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<< \n>>> Status: FAILED <<<`);
+    
   }
 }
 
