@@ -3,20 +3,20 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName="";
+let candidateName='';
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question="Who was the first American woman in space? ";
 let correctAnswer="Sally Ride";
 let candidateAnswer="";
-let questions=["Who was the first American woman in space?","True or false: 5000 meters = 5 kilometers.", "(5 + 3)/2 * 10 = ?","Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?","What is the minimum crew size for the ISS?"];
-let correctAnswers=["Sally Ride","True","40", "Trajectory",	"3"];
+let questions=['Who was the first American woman in space? ','True or false: 5000 meters = 5 kilometers. ', '(5 + 3)/2 * 10 = ?',"Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",'What is the minimum crew size for the ISS? '];
+let correctAnswers=['Sally Ride','true','40','Trajectory','3'];
 let candidateAnswers=[];
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-candidateName=input.question("Please enter your name dear candidate: ");
-console.log(`Welcome to Space Program Dear Candidate ${candidateName}! `)
+candidateName=input.question('Please enter your name dear candidate: ');
+console.log(`Welcome to Space Program Dear Candidate ${candidateName}! `);
 }
 
 function askQuestion() {
@@ -40,8 +40,8 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let count=0;
 for(let i=0; i<questions.length; i++){
-if(candidateAnswers[i]===correctAnswers[i]){
-  count++
+if(candidateAnswers[i]==correctAnswers[i]){
+  count++;
 }
 }
 
@@ -54,9 +54,9 @@ if(candidateAnswers[i]===correctAnswers[i]){
 
   console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<<`);
   if(grade>=80){
-    return (">>> Status: SUCCESSFULL <<<");
+    return '>>> Status: SUCCESSFULL <<<';
   }else{
-    return (">>> Status: FAILED <<<");
+    return '>>> Status: FAILED <<<';
   }
 }
 
