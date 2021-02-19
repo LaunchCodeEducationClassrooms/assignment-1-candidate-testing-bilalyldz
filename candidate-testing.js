@@ -56,7 +56,7 @@ if(candidateAnswers[i]===correctAnswers[i]){
   if(grade>=80){
     return (">>> Status: SUCCESSFULL <<<");
   }else{
-    return (">>> Status: FAILED <<<")
+    return (">>> Status: FAILED <<<");
   }
 }
 
