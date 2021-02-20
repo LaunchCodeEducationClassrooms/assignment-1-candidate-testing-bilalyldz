@@ -63,7 +63,7 @@ if((candidateAnswers[i].toLowerCase())===(correctAnswers[i].toLowerCase())){
     
   }else{
      console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<< \n>>> Status: FAILED <<<`);
-      //return grade;
+    return grade;
     
   }
  
@@ -72,7 +72,7 @@ if((candidateAnswers[i].toLowerCase())===(correctAnswers[i].toLowerCase())){
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  
+
   console.log(`Welcome to Space Program Dear Candidate ${candidateName}! `);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
