@@ -59,7 +59,7 @@ if((candidateAnswers[i].toLowerCase())===(correctAnswers[i].toLowerCase())){
   
   if(grade>=80){
     console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<< \n>>> Status: SUCCESSFULL <<<;`);
-     //return grade;
+     return grade;
     
   }else{
      console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<< \n>>> Status: FAILED <<<`);
