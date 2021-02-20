@@ -22,13 +22,11 @@ let candidateAnswers=[];
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName=input.question('Please enter your name dear candidate: ');
-console.log(`Welcome to Space Program Dear Candidate ${candidateName}! `);
+return candidateName;
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer//
-
-
 
 for(let i=0; i<questions.length; i++){
 
@@ -38,7 +36,7 @@ console.log("Your answer "+candidateAnswer);
 console.log("Correct answer "+correctAnswers[i]);
 }
 
-console.log(candidateAnswers);
+//console.log(candidateAnswers);
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -61,11 +59,11 @@ if((candidateAnswers[i].toLowerCase())===(correctAnswers[i].toLowerCase())){
   
   if(grade>=80){
     console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<< \n>>> Status: SUCCESSFULL <<<;`);
-     return grade;
+     //return grade;
     
   }else{
      console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<< \n>>> Status: FAILED <<<`);
-      return grade;
+      //return grade;
     
   }
  
@@ -75,6 +73,7 @@ function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
   
+  console.log(`Welcome to Space Program Dear Candidate ${candidateName}! `);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
